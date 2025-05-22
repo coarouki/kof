@@ -14,13 +14,21 @@
             <div id="game"></div>
         </div>
         <script>
+            const params = new URLSearchParams(window.location.search);
+            const gameFile = params.get("game");
+
+            const romPath = './roms/kof94.zip';
+            if (gameFile){ 
+                romPath = `./roms/${gameFile}.zip`;  // zip 확장자는 내부에서 붙임
+            }
+
             EJS_player = "#game";
             EJS_core = "mame2003";
             EJS_gameName = "KOF";
             EJS_color = "#0064ff";
             EJS_startOnLoaded = true;
             EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            EJS_gameUrl = "./roms/kof94.zip";
+            EJS_gameUrl = romPath;
             
             EJS_light = true; // 성능 최적화 모드
             EJS_Buttons = {
