@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>kof94</title>
+        <title>KOF</title>
         <style>
             body, html {
                 margin: 0;
@@ -21,6 +21,8 @@
             if (gameFile){ 
                 romPath = `./roms/${gameFile}.zip`;  // zip 확장자는 내부에서 붙임
             }
+
+            console.log(romPath);
 
             EJS_player = "#game";
             EJS_core = "mame2003";
