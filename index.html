@@ -52,6 +52,9 @@
   </div>
 
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get("game");
+    
     // 5초 뒤 게임 시작
     setTimeout(() => {
       document.getElementById('logo').style.display = 'none';
