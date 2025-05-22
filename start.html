@@ -17,7 +17,7 @@
             const params = new URLSearchParams(window.location.search);
             const gameFile = params.get("game");
 
-            const romPath = './roms/kof94.zip';
+            let romPath = './roms/kof94.zip';
             if (gameFile){ 
                 romPath = `./roms/${gameFile}.zip`;  // zip 확장자는 내부에서 붙임
             }
